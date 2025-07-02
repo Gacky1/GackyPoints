@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esports Tournament Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Esports Tournament Manager</h1>
+
+    <div class="controls">
+      <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+    </div>
+
+    <h2>Tournament Setup</h2>
+    <input type="text" id="tournamentName" placeholder="Tournament Name" />
+    <select id="gameSelect">
+      <option value="freefire">Free Fire</option>
+      <option value="bgmi">BGMI</option>
+      <option value="manual">Manual Points</option>
+    </select>
+    <br>
+    <input type="number" id="teamCount" placeholder="Number of Teams (e.g., 12)" min="2" max="24" />
+    <button id="generateTeamsBtn">Generate Team Inputs</button>
+    <div id="teamInputs"></div>
+
+    <h2>Add Round</h2>
+    <input type="text" id="roundName" placeholder="Round Name (e.g., Semi Finals)" />
+    <input type="number" id="matchCount" placeholder="Matches in Round" min="1" />
+    <button id="addRoundBtn">Add Round</button>
+
+    <div id="matchResultsContainer"></div>
+
+    <div class="controls">
+      <button id="calculateBtn">🏆 Calculate Leaderboard</button>
+    </div>
+
+    <div id="leaderboardTable"></div>
+
+    <div class="controls">
+      <button id="exportImageBtn">📸 Export as Image</button>
+      <button id="exportPdfBtn">📄 Export as PDF</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

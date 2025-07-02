@@ -1,0 +1,145 @@
+/* === Esports Tournament Manager CSS === */
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+button {
+  background-color: #00f7ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #00c0cc;
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+.dark-mode button {
+  background-color: #ff0048;
+  color: white;
+  box-shadow: 0 0 10px #ff0048;
+}
+
+#leaderboardTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeInUp 0.5s ease;
+}
+
+#leaderboardTable th, #leaderboardTable td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#leaderboardTable tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  input, select, button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Esports-themed highlights */
+input:focus, select:focus {
+  box-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff inset;
+}
+
+/* Match & round section style */
+#matchResultsContainer div {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px dashed #00f7ff;
+  border-radius: 10px;
+  background-color: rgba(0, 247, 255, 0.05);
+}
+
+#matchResultsContainer input {
+  width: 100px;
+  margin: 5px;
+}
+
+/* Header buttons */
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#exportImageBtn, #exportPdfBtn {
+  background: #fff200;
+  color: #000;
+  margin: 10px;
+  box-shadow: 0 0 8px #fff200;
+}
+
+#exportImageBtn:hover, #exportPdfBtn:hover {
+  background: #f1e100;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00f7ff;
+  border-radius: 10px;
+}
